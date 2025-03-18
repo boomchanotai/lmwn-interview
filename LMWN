@@ -1,0 +1,48 @@
+1. Domain Name Server is like a YellowPages which map domain name to IP-Address
+2. TTL is age of dns to cache data. During this time request will get data from cache and not request to server.
+3. It will cache your data too long. So that server won't get request often which means server's cost is saver.
+4. Requester won't get fresh data so that I will make your application get not up-to-dated data.
+5. Requester will get up-to-date data.
+6. Server will get more often request so that server so that server will get more load.
+7. 80, 443
+8. Success
+9. Client error
+10. Server error
+11. Not necessary because if Content-Type is just tell format of body data. if server already have JSON.parse(response.body) so that any body will format to json or getting an error. But, I would be better if we specify Content-Type to let server know what data type we sent.
+12. In this question, I assumed that both operation is on Go code so that I have to connect redis from external service. The answer is Increment an integer variable is better than INCR in Redis. because although both have same time complexity O(1) but Redis has to connect to external service which will have additional latency.
+13. https://drive.google.com/file/d/1c9RkUzhDpeqd76OIhsUpUqgJ4c1VSteb/view?usp=sharing
+14. Docker is tools for containerize our applications to separate environments like VM but more saver. This approach give us more benefits like save more storage, save more RAM.
+15. K8s is automate scaling, deployment and manage container tools from google.
+16. Each pods have their own IP Address. each pods communicate together using direct IP Address.
+17. Layer 4 visible on application ports and TCP/UDP protocol
+18. Layer 7 is on application communicate with http protocol so that It can make decision with URL or Cookie.
+19. Layer 7 because It is application layer so that can handle using URL, Cookie.
+20. Encryption is two-way transformed data using key to encrypt data to unreadable data and decrypt data to original data in such as RSA.
+	Hashing is one-way transform data in unreadable data and can't convert data back to original data such as MD5, SHA256.
+21. Symmetric use only one key to encrypt and decrypt data.
+	Asymmetric use two difference key to encrypt and decrypt data.
+22.	CGO_ENABLED=0 GOOS=linux go build main.go
+23. Nothing wrong, package prog1 will have function named "main" which is private function which can be called in same package. But if question ask about entry point, It will be wrong at line 1. The package should be main.
+24. v1 is a private variable while V2 is a public variable which can be accessed from outside package.
+25. numbers := make([]int, 0, 100)
+26. numbers := [5]int{}
+27. numbers = append(numbers, 100)
+	numbers = append(numbers, 200)
+28. defer is keyword for define the function which we want to run after main function has been finished.
+29. Not the same. Because go routine can be either concurrence or parallel managed by Go but, thread is parallel managed by OS.
+30. 
+type Message struct {
+	GreetingMessage string `json:"greeting_message"`
+}
+31. 
+for _, employee := range employees {
+	fmt.Println(employee)
+}
+32. 
+= is for assign value to existing variable
+:= is create new variable and assign value to variable
+33. if _, ok := ages["John"]; !ok {}
+34. line := fmt.Sprintf("%s (%.2f)", item, price)
+35. sync.Mutex is like single room toilet. If there is someone use toilet so, no one else can use in the same time. This allows us to prevent access from another source to modify when we use the variable.
+36. fmt.Println(time.Now().Unix())
+37. 
